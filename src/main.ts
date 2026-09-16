@@ -128,7 +128,12 @@ async function search(event: SubmitEvent): Promise<void> {
   state = { status: "loading" };
   render();
 
-  const data = await fetchWeatherForCity(cityName);
+  let data: WeatherData | null = null;
+  try {
+    data = await fetchWeatherForCity(cityName);
+  } catch {
+    data = null;
+  }
   state = data ? { status: "success", data } : { status: "empty" };
   render();
 }

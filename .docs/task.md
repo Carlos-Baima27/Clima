@@ -78,18 +78,18 @@ Este arquivo divide a implementação descrita no [prd.md](./prd.md) em tarefas 
 
 ### 9. Conectar e validar o formulário de busca
 
-- [ ] Submeter a busca por ação única do usuário, incluindo envio pelo teclado.
-- [ ] Impedir consulta para entrada vazia ou composta apenas por espaços.
-- [ ] Desabilitar ou proteger a ação enquanto a busca estiver em andamento e restaurar o formulário ao finalizar.
-- [ ] Tratar erros do fluxo de consulta exibindo o estado vazio sem erro não tratado no console.
+- [x] Submeter a busca por ação única do usuário, incluindo envio pelo teclado.
+- [x] Impedir consulta para entrada vazia ou composta apenas por espaços.
+- [x] Desabilitar ou proteger a ação enquanto a busca estiver em andamento e restaurar o formulário ao finalizar.
+- [x] Tratar erros do fluxo de consulta exibindo o estado vazio sem erro não tratado no console.
 
 **Critério de aprovação:** uma busca válida exibe loading e depois sucesso; entrada vazia não chama a API; durante loading não há buscas concorrentes pela mesma ação; falhas retornam ao estado vazio e permitem nova tentativa.
 
 ### 10. Aplicar o layout visual e a responsividade
 
-- [ ] Implementar o fundo escuro, o contêiner claro centralizado e a composição em sidebar mais área principal conforme o PRD.
-- [ ] Estilizar busca, loading, estado vazio, dados e unidades com contraste e hierarquia legíveis.
-- [ ] Fazer o conteúdo empilhar de forma utilizável em telas menores, sem sobreposição nem overflow horizontal.
+- [x] Implementar o fundo escuro, o contêiner claro centralizado e a composição em sidebar mais área principal conforme o PRD.
+- [x] Estilizar busca, loading, estado vazio, dados e unidades com contraste e hierarquia legíveis.
+- [x] Fazer o conteúdo empilhar de forma utilizável em telas menores, sem sobreposição nem overflow horizontal.
 
 **Critério de aprovação:** em viewport desktop o resultado apresenta duas colunas dentro do contêiner arredondado; em viewport mobile os blocos ficam legíveis e empilhados, sem conteúdo cortado ou sobreposto.
 
