@@ -45,9 +45,9 @@ Este arquivo divide a implementação descrita no [prd.md](./prd.md) em tarefas 
 
 ### 5. Criar o fluxo único de consulta
 
-- [ ] Compor os serviços de geocodificação e clima em uma operação única para a UI.
-- [ ] Interromper o fluxo quando a cidade não for encontrada ou quando os dados climáticos estiverem indisponíveis.
-- [ ] Garantir que falhas das duas etapas resultem em um estado consistente de ausência, sem requisições com parâmetros inválidos.
+- [x] Compor os serviços de geocodificação e clima em uma operação única para a UI.
+- [x] Interromper o fluxo quando a cidade não for encontrada ou quando os dados climáticos estiverem indisponíveis.
+- [x] Garantir que falhas das duas etapas resultem em um estado consistente de ausência, sem requisições com parâmetros inválidos.
 
 **Critério de aprovação:** uma busca válida executa as duas etapas na ordem correta e produz um modelo pronto para renderização; qualquer falha produz o mesmo resultado de ausência e não deixa dados parciais.
 
