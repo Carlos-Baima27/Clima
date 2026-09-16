@@ -1,7 +1,7 @@
 :root {
   font-family: Georgia, "Times New Roman", serif;
-  color: #1f2529;
-  background: #24272b;
+  color: #183b56;
+  background: #102a43;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,7 +17,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background: radial-gradient(circle at top, #3b4145, #24272b 58%);
+  background: radial-gradient(circle at top, #285a7d, #102a43 62%);
 }
 button,
 input {
@@ -29,7 +29,7 @@ input {
   margin: 24px auto;
   overflow: hidden;
   border-radius: 24px;
-  background: #f8f7f2;
+  background: #f4f8fb;
   box-shadow: 0 24px 60px rgb(0 0 0 / 26%);
 }
 .search-header {
@@ -38,13 +38,13 @@ input {
   justify-content: space-between;
   gap: 28px;
   padding: 38px 42px 30px;
-  border-bottom: 1px solid #deded7;
+  border-bottom: 1px solid #d6e2ea;
 }
 .eyebrow,
 .section-label,
 .location-country {
   margin: 0 0 8px;
-  color: #69736d;
+  color: #627d98;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
@@ -70,22 +70,22 @@ h1 {
   min-width: 0;
   flex: 1;
   padding: 13px 14px;
-  border: 1px solid #c9cec8;
+  border: 1px solid #b8cbd8;
   border-right: 0;
   border-radius: 9px 0 0 9px;
   outline: 0;
   background: #fff;
 }
 .search-form input:focus {
-  border-color: #426b5c;
-  box-shadow: 0 0 0 3px rgb(66 107 92 / 16%);
+  border-color: #1976a8;
+  box-shadow: 0 0 0 3px rgb(25 118 168 / 16%);
 }
 .search-form button {
   padding: 0 18px;
   border: 0;
   border-radius: 0 9px 9px 0;
   color: #fff;
-  background: #426b5c;
+  background: #1976a8;
   cursor: pointer;
 }
 .search-form button:disabled,
@@ -97,7 +97,7 @@ h1 {
   height: 0;
   padding: 0 42px;
   overflow: hidden;
-  color: #426b5c;
+  color: #1976a8;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 0.85rem;
 }
@@ -117,7 +117,7 @@ h1 {
   text-align: center;
 }
 .empty-icon {
-  color: #d59b4c;
+  color: #f4b942;
   font-size: 4rem;
   line-height: 1;
 }
@@ -127,7 +127,7 @@ h1 {
 }
 .empty-state p {
   margin-bottom: 0;
-  color: #69736d;
+  color: #627d98;
 }
 .loading-state {
   display: grid;
@@ -139,7 +139,7 @@ h1 {
   flex-direction: column;
   gap: 14px;
   padding: 42px;
-  background: #426b5c;
+  background: #1976a8;
 }
 .loading-details {
   padding: 42px;
@@ -163,7 +163,7 @@ h1 {
   animation: skeleton-shimmer 1.4s ease-in-out infinite;
 }
 .loading-details .skeleton {
-  background: linear-gradient(90deg, #e4e6df 25%, #f5f5ef 50%, #e4e6df 75%);
+  background: linear-gradient(90deg, #dceaf2 25%, #f5f9fb 50%, #dceaf2 75%);
   background-size: 200% 100%;
 }
 .skeleton-label {
@@ -214,10 +214,10 @@ h1 {
 .weather-sidebar {
   padding: 42px;
   color: #fff;
-  background: #426b5c;
+  background: #1976a8;
 }
 .weather-sidebar .location-country {
-  color: #c6d9c9;
+  color: #d1e8f3;
 }
 .weather-sidebar h2 {
   margin: 0;
@@ -226,7 +226,7 @@ h1 {
 }
 .location-timezone {
   margin: 10px 0 48px;
-  color: #c6d9c9;
+  color: #d1e8f3;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 0.78rem;
 }
@@ -244,12 +244,12 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  color: #dce9dc;
+  color: #dcecf4;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 0.78rem;
 }
 .period-icon {
-  color: #f3c56d;
+  color: #f4b942;
   font-size: 1.8rem;
   line-height: 1;
 }
@@ -268,14 +268,14 @@ h1 {
 .metric {
   min-height: 110px;
   padding: 18px;
-  border: 1px solid #deded7;
+  border: 1px solid #d6e2ea;
   border-radius: 10px;
   background: #fff;
 }
 .metric span {
   display: block;
   margin-bottom: 22px;
-  color: #69736d;
+  color: #627d98;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 0.78rem;
 }
