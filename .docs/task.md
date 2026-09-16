@@ -53,26 +53,26 @@ Este arquivo divide a implementação descrita no [prd.md](./prd.md) em tarefas 
 
 ### 6. Implementar utilitários de interpretação e formatação
 
-- [ ] Mapear os códigos WMO previstos no PRD para descrições legíveis em português, incluindo códigos não listados como fallback.
-- [ ] Criar formatadores para temperatura, umidade, precipitação, vento, direção e data no timezone da cidade.
-- [ ] Converter o indicador `is_day` para o texto de dia ou noite.
+- [x] Mapear os códigos WMO previstos no PRD para descrições legíveis em português, incluindo códigos não listados como fallback.
+- [x] Criar formatadores para temperatura, umidade, precipitação, vento, direção e data no timezone da cidade.
+- [x] Converter o indicador `is_day` para o texto de dia ou noite.
 
 **Critério de aprovação:** cada código WMO definido no PRD retorna uma descrição em português; valores climáticos são exibidos com unidades corretas e uma data válida é formatada usando o timezone recebido.
 
 ### 7. Substituir o template pela estrutura da aplicação
 
-- [ ] Atualizar o HTML gerado por `main.ts` para conter busca, estado vazio, loading, sidebar e área principal.
-- [ ] Usar elementos semânticos e identificadores estáveis para que a camada de renderização atualize o conteúdo sem recriar a aplicação inteira.
-- [ ] Manter textos de fallback claros e compatíveis com os estados descritos no PRD.
+- [x] Atualizar o HTML gerado por `main.ts` para conter busca, estado vazio, loading, sidebar e área principal.
+- [x] Usar elementos semânticos e identificadores estáveis para que a camada de renderização atualize o conteúdo sem recriar a aplicação inteira.
+- [x] Manter textos de fallback claros e compatíveis com os estados descritos no PRD.
 
 **Critério de aprovação:** ao abrir a aplicação, o usuário encontra o campo de cidade e um estado inicial válido; a estrutura contém todos os pontos de renderização necessários e não exibe o template padrão do Vite.
 
 ### 8. Implementar estado e renderização da UI
 
-- [ ] Criar o estado local para busca, loading, sucesso e ausência/erro.
-- [ ] Renderizar na sidebar o nome, país, temperatura, data, período e descrição do tempo.
-- [ ] Renderizar na área principal umidade, sensação térmica, precipitação e vento com suas unidades.
-- [ ] Remover resultados antigos ao iniciar uma nova busca ou ao receber ausência de dados.
+- [x] Criar o estado local para busca, loading, sucesso e ausência/erro.
+- [x] Renderizar na sidebar o nome, país, temperatura, data, período e descrição do tempo.
+- [x] Renderizar na área principal umidade, sensação térmica, precipitação e vento com suas unidades.
+- [x] Remover resultados antigos ao iniciar uma nova busca ou ao receber ausência de dados.
 
 **Critério de aprovação:** dados mockados de sucesso preenchem todos os campos obrigatórios; loading, estado vazio e resultado não aparecem simultaneamente; uma nova busca substitui o resultado anterior corretamente.
 
