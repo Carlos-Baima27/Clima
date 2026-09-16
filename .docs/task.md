@@ -29,7 +29,8 @@ Este arquivo divide a implementação descrita no [prd.md](./prd.md) em tarefas 
 
 ### 3. Implementar o serviço de geocodificação
 
-- [x] Criar uma função dedicada para consultar o endpoint de busca de cidades da OpenMeteo.
+" [x] Criar uma função dedicada para consultar o endpoint de busca de cidades da OpenMeteo.
+
 - [x] Validar o nome recebido antes da requisição e tratar campo vazio, falha de rede, resposta inválida e ausência de resultados.
 - [x] Retornar somente os dados necessários para a próxima etapa: nome, latitude, longitude, código do país e timezone.
 

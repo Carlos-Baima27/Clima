@@ -41,6 +41,26 @@ app.innerHTML = `
         <h2>Encontre o clima de uma cidade</h2>
         <p>Digite um nome acima para consultar as condições atuais.</p>
       </div>
+      <div id="loading-state" class="loading-state" hidden aria-label="Carregando clima">
+        <div class="loading-sidebar">
+          <span class="skeleton skeleton-label"></span>
+          <span class="skeleton skeleton-title"></span>
+          <span class="skeleton skeleton-place"></span>
+          <span class="skeleton skeleton-temperature"></span>
+          <span class="skeleton skeleton-description"></span>
+        </div>
+        <div class="loading-details">
+          <span class="skeleton skeleton-section-label"></span>
+          <div class="loading-metrics">
+            <span class="skeleton skeleton-metric"></span>
+            <span class="skeleton skeleton-metric"></span>
+            <span class="skeleton skeleton-metric"></span>
+            <span class="skeleton skeleton-metric"></span>
+            <span class="skeleton skeleton-metric"></span>
+            <span class="skeleton skeleton-metric"></span>
+          </div>
+        </div>
+      </div>
       <div id="weather-result" class="weather-result" hidden>
         <aside class="weather-sidebar">
           <p id="location-country" class="location-country"></p>
@@ -75,6 +95,7 @@ const input = document.querySelector<HTMLInputElement>("#city-input")!;
 const button = document.querySelector<HTMLButtonElement>("#search-button")!;
 const status = document.querySelector<HTMLDivElement>("#status")!;
 const emptyState = document.querySelector<HTMLDivElement>("#empty-state")!;
+const loadingState = document.querySelector<HTMLDivElement>("#loading-state")!;
 const weatherResult =
   document.querySelector<HTMLDivElement>("#weather-result")!;
 
@@ -117,6 +138,7 @@ function render(): void {
   input.disabled = isLoading;
   status.textContent = isLoading ? "Buscando clima..." : "";
   emptyState.hidden = !hasEmptyState;
+  loadingState.hidden = !isLoading;
   weatherResult.hidden = !isSuccess;
 
   if (state.status === "success") {
