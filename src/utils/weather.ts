@@ -29,3 +29,7 @@ export function describeWeatherCode(code: number): string {
 export function describeDayPeriod(isDay: number): string {
   return isDay === 1 ? "Dia" : "Noite";
 }
+
+export function getDayPeriodIcon(isDay: number): string {
+  return isDay === 1 ? "☀" : "☾";
+}

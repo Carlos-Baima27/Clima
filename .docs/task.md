@@ -95,13 +95,13 @@ Este arquivo divide a implementação descrita no [prd.md](./prd.md) em tarefas 
 
 ### 11. Verificar integração e critérios de aceitação
 
-- [ ] Testar manualmente busca válida, cidade inexistente, clima indisponível, campo vazio e falha de rede.
-- [ ] Confirmar que as requisições usam os endpoints, parâmetros e timezone definidos no PRD.
-- [ ] Executar o build de produção e revisar os critérios de aceitação do PRD, corrigindo apenas falhas relacionadas ao escopo.
+- [x] Testar manualmente busca válida, cidade inexistente, clima indisponível, campo vazio e falha de rede.
+- [x] Confirmar que as requisições usam os endpoints, parâmetros e timezone definidos no PRD.
+- [x] Executar o build de produção e revisar os critérios de aceitação do PRD, corrigindo apenas falhas relacionadas ao escopo.
 
 **Critério de aprovação:** todos os casos de uso do PRD têm comportamento observável correto, os dados obrigatórios são exibidos, a aplicação mantém a UI utilizável após falhas e `npm run build` passa sem erros.
 
 ## Conclusão
 
-- [ ] Todas as tarefas anteriores estão marcadas e seus critérios de aprovação foram verificados.
-- [ ] A implementação final atende aos critérios de aceitação da seção 11 do [prd.md](./prd.md).
+- [x] Todas as tarefas anteriores estão marcadas e seus critérios de aprovação foram verificados.
+- [x] A implementação final atende aos critérios de aceitação da seção 11 do [prd.md](./prd.md).

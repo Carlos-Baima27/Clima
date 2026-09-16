@@ -10,6 +10,9 @@
 * {
   box-sizing: border-box;
 }
+[hidden] {
+  display: none !important;
+}
 body {
   min-width: 320px;
   min-height: 100vh;
@@ -91,14 +94,19 @@ h1 {
   opacity: 0.6;
 }
 .status {
-  min-height: 24px;
-  padding: 12px 42px 0;
+  height: 0;
+  padding: 0 42px;
+  overflow: hidden;
   color: #426b5c;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 0.85rem;
 }
+.status:not(:empty) {
+  height: 26px;
+  padding-top: 8px;
+}
 .weather-content {
-  min-height: 450px;
+  min-height: 0;
 }
 .empty-state {
   display: grid;
@@ -162,6 +170,11 @@ h1 {
   color: #dce9dc;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 0.78rem;
+}
+.period-icon {
+  color: #f3c56d;
+  font-size: 1.8rem;
+  line-height: 1;
 }
 .day-meta span:last-child {
   color: #fff;

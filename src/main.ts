@@ -8,7 +8,11 @@ import {
   formatWindDirection,
   formatWindSpeed,
 } from "./utils/formatters.ts";
-import { describeDayPeriod, describeWeatherCode } from "./utils/weather.ts";
+import {
+  describeDayPeriod,
+  describeWeatherCode,
+  getDayPeriodIcon,
+} from "./utils/weather.ts";
 import type { WeatherData, WeatherState } from "./types/weather.ts";
 
 const app = document.querySelector<HTMLDivElement>("#app");
@@ -30,8 +34,8 @@ app.innerHTML = `
         <button id="search-button" type="submit">Buscar</button>
       </form>
     </header>
-    <div id="status" class="status" role="status" aria-live="polite"></div>
     <section id="weather-content" class="weather-content" aria-live="polite">
+      <div id="status" class="status" role="status" aria-live="polite"></div>
       <div id="empty-state" class="empty-state">
         <span class="empty-icon" aria-hidden="true">☼</span>
         <h2>Encontre o clima de uma cidade</h2>
@@ -45,6 +49,7 @@ app.innerHTML = `
           <p id="temperature" class="temperature"></p>
           <p id="weather-description" class="weather-description"></p>
           <div class="day-meta">
+            <span id="period-icon" class="period-icon" aria-hidden="true"></span>
             <span id="current-date"></span>
             <span id="day-period"></span>
           </div>
@@ -91,6 +96,7 @@ function renderWeather(data: WeatherData): void {
   setText("weather-description", describeWeatherCode(current.weatherCode));
   setText("current-date", formatLocalDate(location.timezone));
   setText("day-period", describeDayPeriod(current.isDay));
+  setText("period-icon", getDayPeriodIcon(current.isDay));
   setText("humidity", formatPercentage(current.relativeHumidity));
   setText(
     "apparent-temperature",
